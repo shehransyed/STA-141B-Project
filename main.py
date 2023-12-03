@@ -44,6 +44,7 @@ def get_zip_weather(api_key,zipp, country = 'US'):
 
 # Initialize the Dash app
 app = dash.Dash(__name__)
+server = app.server
 
 # Define the layout of your dashboard
 app.layout = html.Div(

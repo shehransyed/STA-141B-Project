@@ -1,6 +1,3 @@
 dash==2.14.2
 pandas
-requests
-plotly.express
-urllib.error
-time
+gunicorn
