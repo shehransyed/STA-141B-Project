@@ -9,8 +9,8 @@ import urllib.error
 import time
 
 def download_file(url):
-    max_retries = 3
-    delay = 5  # Initial delay in seconds
+    max_retries = 10
+    delay = 1  # Initial delay in seconds
 
     for _ in range(max_retries):
         try:
@@ -21,7 +21,7 @@ def download_file(url):
         except urllib.error.URLError:
             print(f"Download failed. Retrying in {delay} seconds...")
             time.sleep(delay)
-            delay *= 2  # Increase the delay each time
+            # delay *= 2  # Increase the delay each time
     else:
         print(f"Failed to download file after {max_retries} attempts.")
     
